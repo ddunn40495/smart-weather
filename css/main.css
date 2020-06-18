@@ -1,4 +1,25 @@
 #container {
+    display: grid
+    grid-template-columns: 1fr 1fr;
+
+}
+
+h1  {
+    text-align: center;
+    font-family: 'Istok Web', sans-serif, bold;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+body {
+    background-color:  #99e6e6;
+    font-family: 'Istok Web', sans-serif;
+}
+
+#bottom_container {
     display: grid;
-    grid-template-columns: 100px, 160px;
+    grid-template-columns: 1fr 1fr;
 }
