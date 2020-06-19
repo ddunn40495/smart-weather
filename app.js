@@ -14,13 +14,14 @@ $(()=> {
     //     }
     // }
 
-    const baseURL = `https://www.tsawaittimes.com/`
-    const apiKey = `uxXWAUUO0PGFyeyYn7btpURfmhQnr8Mf`
-    const queryType = `t=`
-    let titleQuery = 'eraserhead'
-    let queryURL = baseURL + apiKey + '&' + queryType + titleQuery
+    const baseURL = `https://www.tsawaittimes.com/api/airports/`
+    const apiKey = `uxXWAUUO0PGFyeyYn7btpURfmhQnr8Mf/`
+    // const queryType = `t=`
+    const format = JSON
+    // let airCode = 'ATL'
+    let airportsListURL = baseURL + apiKey + format 
 
-
+  console.log(airportsListURL)
 
 
 
@@ -32,8 +33,7 @@ $(()=> {
     })
     const getTimes = () => {
         $.ajax({
-          url: settings.url,
-          headers: settings.headers
+          url: airportsListURL
         }).then((data) => {
           console.log(data)
           $('#waittime_headine').html(`
