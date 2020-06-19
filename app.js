@@ -18,13 +18,15 @@ $(()=> {
    
     $('#main-button').click(function() { 
         const airportVal = $('#search-box').val()
-       
+       console.log(airportVal)
+       getTimes(airportVal)
     })
     const getTimes = () => {
         $.ajax({
           url: settings.url,
           headers: settings.headers
         }).then((data) => {
+          console.log(data)
           $('#waittime_headine').html(`
           <h3> ${getTimes.city} </h3>
           <h3> ${getTimes.code} </h3>
@@ -35,7 +37,7 @@ $(()=> {
         })
       }
       
-      getTimes()
+      
 
 
 
