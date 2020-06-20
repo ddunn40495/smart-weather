@@ -33,7 +33,22 @@ const getForecast = () => {
       <h3> Wind: ${weathData.current.wind_mph} </h3>
       `) 
       $('#three-day-forecast-one').html(`
-      <h3> ${weathData.forecast.forecastday[0].day.avgtemp_f} </h3>
+      <h2> ${weathData.forecast.forecastday[0].date} </h2>
+      <h3> ${weathData.forecast.forecastday[0].day.condition.text} </h3>
+      <h3> ${weathData.forecast.forecastday[0].day.avgtemp_f} F </h3>
+      <h3> Chance of Rain: ${weathData.forecast.forecastday[0].day.daily_chance_of_rain}%</h3>
+      `)
+      $('#three-day-forecast-two').html(`
+      <h2> ${weathData.forecast.forecastday[1].date} </h2>
+      <h3> ${weathData.forecast.forecastday[1].day.condition.text} </h3>
+      <h3> ${weathData.forecast.forecastday[1].day.avgtemp_f} F </h3>
+      <h3> Chance of Rain: ${weathData.forecast.forecastday[1].day.daily_chance_of_rain}% </h3>
+      `)
+      $('#three-day-forecast-three').html(`
+      <h2> ${weathData.forecast.forecastday[2].date} </h2>
+      <h3> ${weathData.forecast.forecastday[2].day.condition.text} </h3>
+      <h3> ${weathData.forecast.forecastday[2].day.avgtemp_f} F </h3>
+      <h3> Chance of Rain: ${weathData.forecast.forecastday[2].day.daily_chance_of_rain}% </h3>
       `)
       }, (error) => {
         console.error(error)
