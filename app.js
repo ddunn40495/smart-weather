@@ -8,18 +8,19 @@ $( () => {
       })
 
 // API variables
-const baseURL = `http://api.weatherapi.com/v1/current.json?key=`
+const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
 const apiKey = `7c70246dd148451ab10161808201906`
 let currCityCode = 30039
 const extraCode = `&q=`
 const queryURL = baseURL + apiKey + extraCode 
+const extraDaysCode = `&days=`
+const fiveForecastCode = 3
 
 
-
-// API Call Function
+// API Call Function Current and 3 Day Forecast
 const getForecast = () => {
       $.ajax({
-        url: queryURL + currCityCode
+        url: queryURL + currCityCode + extraDaysCode + fiveForecastCode
       }).then((weathData) => {
       $('.forecast-results').html(`
       <h2> ${weathData.location.name} </h2>
@@ -30,14 +31,19 @@ const getForecast = () => {
       <h3> Humidity:  ${weathData.current.humidity} </h3>
       <h3> Feels like:  ${weathData.current.feelslike_f} </h3>
       <h3> Wind: ${weathData.current.wind_mph} </h3>
+      `) 
+      $('#three-day-forecast-one').html(`
+      <h3> ${weathData.forecast.forecastday[0].day.avgtemp_f} </h3>
       `)
-      const $img = $('<img>').attr('src', weathData.current.condition.icon).attr('alt', weathData.current.condition.text)
-      $('.forecast-results').append($img)
       }, (error) => {
         console.error(error)
       })
     }
-      
+
+
+
+
+
 });
 
 
