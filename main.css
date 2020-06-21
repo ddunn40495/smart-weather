@@ -1,13 +1,5 @@
-.container {
-    display: flex;
-    flex-direction: row;
 
-}
-
-.col {
-    flex: auto;
-    margin: 5%;
-}
+   
 h1  {
     text-align: center;
     font-family: 'Istok Web', sans-serif, bold;
@@ -25,7 +17,3 @@ body {
     font-family: 'Istok Web', sans-serif;
 }
 
-#bottom_container {
-    
-    
-}

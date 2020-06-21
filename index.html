@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     
     <h1>Did You Check The Weather?</h1>
 
 <div class="container">
-    
-        <div class="col">
-            <div class="mainboxs" id="location-headline">
+    <div class="row">
+        <div class="col card" style="width: 18rem;">
+            <div class="card-body" id="location-headline">
                 <label for="locations">Search Location (by zip code)</label>
                 <form >
-                <input type="text" id="search-box">
-                <button type="submit" id="search-button">Search</button>
+                    <input class="form-control" type="text" placeholder="Enter Zip Code" id="search-box">
+                    <button type="button" class="btn btn-primary" id="search-button">Search</button>
             </form>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, earum, animi nihil illum exercitationem, quia similique sint ducimus eos accusamus rerum fugit debitis necessitatibus laboriosam dolore esse corporis sapiente. Cum!</p>
             </div>
         </div>
-        <div class="col">
-            <div class="mainboxs" id='forecast-headline'>
+        <div class="col card" style="width: 18rem;">
+            <div class="card-body" id='forecast-headline'>
                     <h1>Current Forecast</h1>
-                    <div class="forecast-results"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae magni harum similique consectetur, esse, sunt accusamus fugiat dolorem nam dolor nisi. Rem beatae, debitis placeat amet fugit animi culpa?</p>
-                </div>
+                    <div class="forecast-results">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae magni harum similique consectetur, esse, sunt accusamus fugiat dolorem nam dolor nisi. Rem beatae, debitis placeat amet fugit animi culpa?</p>
+                    </div>
+            </div>
         </div>
-    
-</div>  
+    </div>
+
 
     <div class="row">
-        <div id="three-day-forecast-headline-box">
-            <h1>3 Day Forecast</h1>
-        </div>
-            <div id="three-day-forecast-one-box">
+        <div class="col card">
+            <div class="card-body" id="three-day-forecast-one-box">
+                <h1>3 Day Forecast</h1>
                 <div id="three-day-forecast-one"></div>
             </div>
-            
-            <div id="three-day-forecast-two-box">
+        </div>   
+        <div class="col card">
+            <div class="card-body" id="three-day-forecast-two-box">
                 <div id="three-day-forecast-two"></div>
-            </div>   
-            
-            <div id="three-day-forecast-three-box">
+            </div>
+        </div>  
+        <div class="col card">
+            <div class="card-body" id="three-day-forecast-three-box">
                 <div id="three-day-forecast-three"></div>
             </div>   
+        </div>  
     </div>   
         
         
-            
+</div>              
 
     
 
@@ -68,10 +72,9 @@
     
     
     
-    
-    
-    
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
 </body>
