@@ -10,33 +10,46 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body class="mainbody">
-    
-    <h1 id="headline">Did You Check The Weather?</h1>
 
 <div class="container">
-    <div class="row">
-        <div class="col" style="width: 18rem;">
-            <div id="location-headline">
-                
-                <form class="search-form">
-                    <input class="form-control" type="text" placeholder="Enter Zip Code" id="search-box">
-                    <button type="button" class="btn btn-primary" id="search-button">Search</button>
-                </form>
-                <div></div>
+    <div class="row" id="top-row">
+            <div class="col" id="location-headline">
+                <h1 id="headline">Currently</h1>
             </div> 
-        </div>
-        <div class="col" style="width: 18rem;">
-            <div class='forecast-headline'>
-                    <h1>Current Forecast</h1>
+            <div class="col">
+                <div class="search-form input-group" id="search-box-container">
+                    <input class="form-control" type="text" placeholder="Enter Zip Code" id="search-box">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary btn-sm" id="search-button">Search
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>   
+            
+    </div>
+
+    <div class="row" id="middle-row">
+
+        <div class="col card">
+            <div class='card-body'>
+                    
                     <div id="forecast-results">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non vitae magni harum similique consectetur, esse, sunt accusamus fugiat dolorem nam dolor nisi. Rem beatae, debitis placeat amet fugit animi culpa?</p>
                     </div>
             </div>
         </div>
+
+        <div class="col">
+                <div id="forecast-results-main">
+
+                </div>
+        </div>
+
     </div>
 
 
-    <div class="row" id="second-row-main">
+    <div class="row" id="bottom-row-main">
         <div class="col card">
             <div class="card-body" id="three-day-forecast-one-box">
                 <h1>3 Day Forecast</h1>

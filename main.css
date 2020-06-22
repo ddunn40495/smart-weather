@@ -45,6 +45,20 @@ video {
     width: 10vw;
 }
 
-#second-row-main {
+#middle-row {
+    
+}
+
+#bottom-row-main {
     padding-top: 75px;
+}
+
+#top-row {
+    margin-top: 30px;
+}
+
+#search-box-container {
+    
+    padding-left: 250px;
+    padding-top: 25px;
 }
