@@ -8,9 +8,11 @@
 
 
 
-body {
+.mainbody {
     background-color:  #99e6e6;
     font-family: 'Istok Web', sans-serif;
+    background-image: url(img/damiano-baschiera-d4feocYfzAM-unsplash.jpg);
+    background-size: cover;
 }
 
 video {
@@ -37,4 +39,12 @@ video {
 
 .card {
     background-color: #c2f0fc;
+}
+
+#search-box {
+    width: 10vw;
+}
+
+#second-row-main {
+    padding-top: 75px;
 }

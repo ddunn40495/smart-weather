@@ -24,6 +24,18 @@ $( () => {
       
         })
 
+     $('#search-box-landing').on('keydown', (event) => {
+       if (event.which == 13) {
+         event.preventDefault()
+        // currCityCode = $('#search-box-landing').val()
+        // window.location.href = "/home/ddunn40495/ddunn40495.github.io/index.html"
+       } else {
+         
+       }
+      })
+
+
+
 // API variables
 const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
 const apiKey = `7c70246dd148451ab10161808201906`
@@ -39,7 +51,7 @@ const getForecast = () => {
       $.ajax({
         url: queryURL + currCityCode + extraDaysCode + fiveForecastCode
       }).then((weathData) => {
-      $('.forecast-results').html(`
+      $('#forecast-results').html(`
       <h2> ${weathData.location.name} </h2>
       <h3> ${weathData.location.region}   ${weathData.location.country} </h3>
       <h3> ${weathData.current.temp_f} F</h3>
@@ -73,6 +85,10 @@ const getForecast = () => {
       })
     }
 
+    // const getForecastLanding = () => {
+    //   window.location.href = "/home/ddunn40495/ddunn40495.github.io/index.html"
+    //   getForecast()
+    // }
 
 
 
