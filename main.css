@@ -1,5 +1,5 @@
 
-h1  {
+#headline {
     text-align: center;
     font-family: 'Istok Web', sans-serif, bold;
     padding-bottom: 30px;
@@ -20,3 +20,8 @@ video {
     height: 100vh;
 }
 
+.landing-search {
+    width: 22vw;
+    margin-top: -25%;
+    position: relative;
+}
