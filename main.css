@@ -46,7 +46,7 @@ video {
 }
 
 #middle-row {
-    
+
 }
 
 #bottom-row-main {
@@ -61,4 +61,8 @@ video {
     
     padding-left: 250px;
     padding-top: 25px;
+}
+
+#current-results-card {
+    width: 300px;
 }
