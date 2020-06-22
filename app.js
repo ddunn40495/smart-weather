@@ -52,9 +52,9 @@ const getForecast = () => {
         url: queryURL + currCityCode + extraDaysCode + fiveForecastCode
       }).then((weathData) => {
       $('#forecast-results-main').html(`
-      <h2 class="animated slideInLeft"> ${weathData.location.name} </h2>
+      <h2 class="city-font animated slideInLeft"> ${weathData.location.name} </h2>
       <h3 class="animated slideInLeft"> ${weathData.location.region}   ${weathData.location.country} </h3>
-      <h3 class="fontfun animated slideInLeft"> ${weathData.current.temp_f} F</h3>
+      <h3 class="temp-font animated slideInLeft"> ${weathData.current.temp_f} F</h3>
       `)
       $('#forecast-results').html(`
       <h3 class="animated slideInLeft"> ${weathData.current.condition.text} </h3>
@@ -80,6 +80,9 @@ const getForecast = () => {
       <h3 class="animated slideInLeft"> ${weathData.forecast.forecastday[3].day.condition.text} </h3>
       <h3 class="animated slideInLeft"> ${weathData.forecast.forecastday[3].day.avgtemp_f} F </h3>
       <h3 class="animated slideInLeft"> Chance of Rain: ${weathData.forecast.forecastday[3].day.daily_chance_of_rain}% </h3>
+      `)
+      $('#headline').html(`
+      <h1 class="animated slideInLeft">Currently</h1> <h2 class="animated slideInLeft"> ${weathData.location.localtime} </h2>
       `)
       
       }, (error) => {

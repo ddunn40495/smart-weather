@@ -75,7 +75,7 @@ video {
     padding-bottom: 40px;
 }
 
-.fontfun {
+.temp-font {
     font-size: 8rem;
 }
 
@@ -83,4 +83,8 @@ video {
     background-color: #aacfcf;
     color: #212529;
     font-family: 'Istok Web', sans-serif;
+}
+
+.city-font {
+    font-size: 3rem;
 }
