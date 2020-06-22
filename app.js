@@ -1,5 +1,11 @@
 $( () => {
 
+
+
+ 
+
+
+
  // Search Button Event Handler
  $('#search-button').on('click', (event) => {
       event.preventDefault()
@@ -50,6 +56,7 @@ const getForecast = () => {
       <h3> ${weathData.forecast.forecastday[2].day.avgtemp_f} F </h3>
       <h3> Chance of Rain: ${weathData.forecast.forecastday[2].day.daily_chance_of_rain}% </h3>
       `)
+    
       }, (error) => {
         console.error(error)
       })
