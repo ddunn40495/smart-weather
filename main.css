@@ -1,7 +1,4 @@
-.view {
-   height: 100%;
-}
-   
+
 h1  {
     text-align: center;
     font-family: 'Istok Web', sans-serif, bold;
@@ -17,6 +14,9 @@ body {
 }
 
 video {
-    
+    object-fit: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
 }
 
