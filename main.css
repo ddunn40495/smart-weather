@@ -38,7 +38,7 @@ video {
 }
 
 .card {
-    background-color: #c2f0fc;
+    background-color: #aacfcf;
 }
 
 #search-box {
@@ -69,4 +69,18 @@ video {
 
 #city-details {
     padding-left: 250px;
+}
+
+.more-spacing {
+    padding-bottom: 40px;
+}
+
+.fontfun {
+    font-size: 8rem;
+}
+
+#search-button {
+    background-color: #aacfcf;
+    color: #212529;
+    font-family: 'Istok Web', sans-serif;
 }

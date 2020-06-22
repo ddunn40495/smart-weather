@@ -54,7 +54,7 @@ const getForecast = () => {
       $('#forecast-results-main').html(`
       <h2> ${weathData.location.name} </h2>
       <h3> ${weathData.location.region}   ${weathData.location.country} </h3>
-      <h3 class="display-3"> ${weathData.current.temp_f} F</h3>
+      <h3 class="fontfun"> ${weathData.current.temp_f} F</h3>
       `)
       $('#forecast-results').html(`
       <h3> ${weathData.current.condition.text} </h3>
