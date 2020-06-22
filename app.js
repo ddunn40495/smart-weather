@@ -13,6 +13,17 @@ $( () => {
       getForecast()
       })
 
+  $('#search-box').on('keydown', (event) => {
+          if (event.which == 13) {
+          event.preventDefault()
+          currCityCode = $('#search-box').val()
+          getForecast()
+          } else {
+            
+          }
+      
+        })
+
 // API variables
 const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
 const apiKey = `7c70246dd148451ab10161808201906`
