@@ -1,8 +1,27 @@
+// API variables
+const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
+const apiKey = `7c70246dd148451ab10161808201906`
+
+const extraCode = `&q=`
+const queryURL = baseURL + apiKey + extraCode 
+const extraDaysCode = `&days=`
+const fiveForecastCode = 5
+
+let params = new URLSearchParams(location.search);
+let locZip = params.get('zip');
+
+let currCityCode = locZip
+
+
+
+
+
+
 $( () => {
 
 
 
- 
+
 
 
 
@@ -24,30 +43,17 @@ $( () => {
       
         })
 
-     $('#search-box-landing').on('keydown', (event) => {
-       if (event.which == 13) {
-         event.preventDefault()
-        // currCityCode = $('#search-box-landing').val()
-        // window.location.href = "/home/ddunn40495/ddunn40495.github.io/index.html"
-       } else {
-         
-       }
-      })
 
 
 
-// API variables
-const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
-const apiKey = `7c70246dd148451ab10161808201906`
-let currCityCode = 30039
-const extraCode = `&q=`
-const queryURL = baseURL + apiKey + extraCode 
-const extraDaysCode = `&days=`
-const fiveForecastCode = 5
+
+
+
 
 
 // API Call Function Current and 3 Day Forecast
 const getForecast = () => {
+  console.log(currCityCode)
       $.ajax({
         url: queryURL + currCityCode + extraDaysCode + fiveForecastCode
       }).then((weathData) => {
@@ -90,11 +96,10 @@ const getForecast = () => {
       })
     }
 
-    // const getForecastLanding = () => {
-    //   window.location.href = "/home/ddunn40495/ddunn40495.github.io/index.html"
-    //   getForecast()
-    // }
-    
+    if (params.has('zip') ) {
+      getForecast()
+    } 
+
 
 
 
