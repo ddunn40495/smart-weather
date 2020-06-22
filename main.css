@@ -66,3 +66,7 @@ video {
 #current-results-card {
     width: 300px;
 }
+
+#city-details {
+    padding-left: 250px;
+}
