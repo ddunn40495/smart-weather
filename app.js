@@ -1,37 +1,31 @@
-// API variables
+
+// API Call variables//
 const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
 const apiKey = `7c70246dd148451ab10161808201906`
-
 const extraCode = `&q=`
 const queryURL = baseURL + apiKey + extraCode 
 const extraDaysCode = `&days=`
 const fiveForecastCode = 5
-
+//Variables to get value out of URL parameter///
 let params = new URLSearchParams(location.search);
 let locZip = params.get('zip');
 
 let currCityCode = locZip
 
 
+$( () => { //Ready Function//
 
 
-
-
-$( () => {
-
-
-
-
-
-
-
- // Search Button Event Handler
+ // Search Button Click Event Handler//
+ //Grabs value from box and runs AJAX call function when pressing search button//
  $('#search-button').on('click', (event) => {
       event.preventDefault()
       currCityCode = $('#search-box').val()
       getForecast()
       })
 
+// Search Button Press Enter Event Handler//
+ //Grabs value from box and runs AJAX call function after pressing enter//
   $('#search-box').on('keydown', (event) => {
           if (event.which == 13) {
           event.preventDefault()
@@ -44,19 +38,16 @@ $( () => {
         })
 
 
-
-
-
-
-
-
-
-// API Call Function Current and 3 Day Forecast
+/// API Call Function  takes value from results page input box or from landing page input box///
+/// If it comes from the landing page the value is passed as a parameter when it redirects to results page//
 const getForecast = () => {
   console.log(currCityCode)
       $.ajax({
         url: queryURL + currCityCode + extraDaysCode + fiveForecastCode
       }).then((weathData) => {
+      
+      //Inserting API Results into Dom//
+      //Added Animation Classes into each element separately//
       $('#forecast-results-main').html(`
       <h2 class="city-font animated slideInLeft"> ${weathData.location.name} </h2>
       <h3 class="animated slideInLeft"> ${weathData.location.region}   ${weathData.location.country} </h3>
@@ -95,7 +86,7 @@ const getForecast = () => {
         console.error(error)
       })
     }
-
+  //If user enters zip code from landing page this IF statement grabs that value and inserts it into AJAX call//
     if (params.has('zip') ) {
       getForecast()
     } 
