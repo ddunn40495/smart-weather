@@ -48,10 +48,32 @@ The biggest issue I had was linking up the landing page and the results page. Ge
 
 The API has icons that go along with the forecast but I wasn’t able to use the data properly.
 Landing Page isn’t responsive. Looks best Full Screen Only.
-
+On github pages it is just going to the results page not the landing page.
+Isnt responsive on phone or tablet
 
 ## Sources
 
 Background Video Credit: “Stock footage provided by Videvo, downloaded from www.videvo.net”
 Background Image Credit: https://unsplash.com/photos/d4feocYfzAM Photographer: Damiano Baschiera Twitter: @damiano_baschiera
-Got pieces of code from: Glenn Brown, James Godfrey-Kittle, Deja Baker, Fatima, CSS Properties 
+Got pieces of code from: Glenn Brown, James Godfrey-Kittle, Deja Baker, Fatima, CSS Properties, Stack OverFlow
+
+https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
+// similar behavior as clicking on a link
+window.location.href = "http://stackoverflow.com";
+
+
+https://css-tricks.com/fun-viewport-units/
+https://css-tricks.com/full-page-background-video-styles/
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+https://api.jquery.com/keydown/
+$( "#target" ).keydown(function() {
+  alert( "Handler for .keydown() called." );
+});
