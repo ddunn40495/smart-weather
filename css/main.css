@@ -1,0 +1,87 @@
+
+/* Results Page headline */
+#headline {
+    text-align: center;
+    font-family: 'Istok Web', sans-serif, bold;
+    padding-bottom: 30px;
+    margin-top: 25px;
+}
+
+
+/* Results Page Body */
+.mainbody {
+    background-color:  #99e6e6;
+    font-family: 'Istok Web', sans-serif;
+    background-image: url(img/damiano-baschiera-d4feocYfzAM-unsplash.jpg);
+    background-size: cover;
+}
+/* Landing Page Background Video */
+video {
+    object-fit: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+/* Landing Page Search Box  */
+.landing-search {
+    width: 22vw;
+    margin-top: -25%;
+    position: relative;
+}
+/* Landing Page title */
+.landing-headline {
+    margin-right: -18%;
+    position: relative;
+    margin-top: -32%;
+    text-align: center;
+    font-family: 'Asap Condensed', sans-serif;
+    color: #a6dcef;
+}
+/* Background Color for Results Divs on Results Page */
+.card {
+    background-color: #aacfcf;
+}
+/* Input Box Results Page */
+#search-box {
+    width: 10vw;
+}
+/* Bottom Row Container Results Page  */
+#bottom-row-main {
+    padding-top: 75px;
+}
+/* Top Row Container Results Page */
+#top-row {
+    margin-top: 30px;
+}
+/* Div for search box results page */
+#search-box-container {
+    
+    padding-left: 250px;
+    padding-top: 25px;
+}
+/*Div for Current Forecast Results  */
+#current-results-card {
+    width: 300px;
+}
+/* Div for Location and Temperature Results */
+#city-details {
+    padding-left: 250px;
+}
+/* Padding on last 2 future forecast divs  */
+.more-spacing {
+    padding-bottom: 40px;
+}
+/* Font Size for Temp */
+.temp-font {
+    font-size: 8rem;
+}
+/* Search Button Results Page */
+#search-button {
+    background-color: #aacfcf;
+    color: #212529;
+    font-family: 'Istok Web', sans-serif;
+}
+/*Font Size for Location  */
+.city-font {
+    font-size: 3rem;
+}
