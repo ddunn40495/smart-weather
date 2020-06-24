@@ -1,6 +1,6 @@
 
 // API Call variables//
-const baseURL = `http://api.weatherapi.com/v1/forecast.json?key=`
+const baseURL = `https://api.weatherapi.com/v1/forecast.json?key=`
 const apiKey = `7c70246dd148451ab10161808201906`
 const extraCode = `&q=`
 const queryURL = baseURL + apiKey + extraCode 
