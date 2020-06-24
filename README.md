@@ -50,6 +50,8 @@ The API has icons that go along with the forecast but I wasn’t able to use the
 Landing Page isn’t responsive. Looks best Full Screen Only.
 On github pages it is just going to the results page not the landing page.
 Isnt responsive on phone or tablet
+Links to API and my github repo
+Wanted to make function to change background image if it was day or night
 
 ## Sources
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!------------- Bootstrap CDN, Google Fonts Files, Stylesheets for My CSS and MDB Bootstrap ------------------>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/mdb.min.css">
+        <link rel="stylesheet" href="main.css">
+        <title>Smart-Weather</title>
+    </head>
+    <body class="mainbody">
+        <div class="container"> <!-------------Parent Flex Container ------------------>
+            <div class="row" id="top-row"> <!-------------Top Row Flex Container ------------------>
+                    <div class="col" id="location-headline">
+                        <h1 id="headline">Currently</h1>
+                    </div> 
+                    <div class="col">
+                        <div class="search-form input-group" id="search-box-container">
+                            <input class="form-control" type="text" placeholder="Enter Zip Code or City" id="search-box">
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-sm" id="search-button">Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>   
+                    
+            </div>
+
+            <div class="row" id="middle-row"> <!-------------Middle Row Flex Container ------------------>
+
+                <div class="col">
+                    <div class="card" id="current-results-card">
+                        <div class='card-body'>
+                            <div id="forecast-results">
+                            <!-------------Forecast Results for Current Day ------------------>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="col" id="city-details">
+                        <div id="forecast-results-main">
+                            <!-------------Current Location  and Temperature ------------------>
+                        </div>
+                </div>
+
+            </div>
+
+
+            <div class="row" id="bottom-row-main"> <!-------------Bottom Row Flex Container ------------------>
+                <div class="col card">
+                    <div class="card-body" id="three-day-forecast-one-box">
+                        <h2>3 Day Forecast</h2>
+                        <div id="three-day-forecast-one"><!-------------Forecast Results for Next Day ------------------></div>
+                    </div>
+                </div>   
+                <div class="col card">
+                    <div class="card-body" id="three-day-forecast-two-box">
+                        <div class="more-spacing"></div>
+                        <div id="three-day-forecast-two"> <!-------------Forecast Results for 2 Days after current day ------------------></div>
+                    </div>
+                </div>  
+                <div class="col card">
+                    <div class="card-body" id="three-day-forecast-three-box">
+                        <div class="more-spacing"><!-------------Forecast Results for 3 Days after current day ------------------></div>
+                        <div id="three-day-forecast-three"></div>
+                    </div>   
+                </div>  
+            </div>   
+                
+                
+        </div>              
+
+        <!---------------------------Script Tags for JavaScript, J Query, Bootstrap JavaScript, Popper JS------------------>              
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <script src="app.js" charset="utf-8"></script>
+    </body>
+</html>

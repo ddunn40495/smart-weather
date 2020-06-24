@@ -19,7 +19,7 @@
     //The AJAX call function getForecast() in app.js takes that value out parameter and inserts that value in AJAX call
     const getForecastLanding = () => {
         let addTwo = 'zip=' + landVal
-        mainURL = "index.html" + addOne + addTwo
+        mainURL = "results.html" + addOne + addTwo
         window.location.href = mainURL
     };
     
