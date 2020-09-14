@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS and CDN in partials -->
+        <%- include ('./partials/head.ejs') %>
+    </head>
+    <body>
+        <nav>
+            <a class="btn btn-secondary" href="/store/new">Add Product</a>
+        </nav>
+        <h1>INDEX</h1>
+        <!-- Container Div -->
+        <div class="container">
+            <!-- Row div -->
+            <div class="row">
+                <!-- For loop  -->
+                <% for(let i = 0; i < product.length; i++){ %>
+
+                    <!-- Col Div *inside for loop* added class to resize/add properties in css -->
+                    <div class="col item-div">
+                        <!-- Card class -->
+                        <div class="card">
+                            <div class="card-body">
+
+                                <!-- Button Shows Product Name Link to Show Page for That Item -->
+                                <a class="btn btn-secondary" href="/store/<%=product[i].id; %>"><%=product[i].name; %> Quantity: <%=product[i].qty; %></a>
+
+                            
+                                <!-- Edit Button to get Edit page -->
+                                <a class="btn btn-secondary" href="/store/<%=product[i].id; %>/edit">Edit</a>
+
+                                <!-- Delete Form with Delete Route, and Button -->
+                                <form action="/store/<%=product[i].id; %>?_method=DELETE" method="POST">
+                                    <input class="btn btn-secondary" type="submit" value="DELETE"/>
+                                </form> 
+
+                                <!-- Pic for each item added class to resize/add properties in css -->
+                                <img class="item-pic-index" src="<%=product[i].img %>  " alt="<%=product[i].name; %>">
+                            </div>
+
+                        </div>
+                    </div>
+
+                <% } %>
+            </div>
+        </div>
+    <footer>
+                <!-- Script Tags in partials folder -->
+        <%- include ('./partials/footer.ejs') %>
+    </footer>
+    </body>
+
+</html>
